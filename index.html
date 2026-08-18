@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta name="description"
+    content="BoldEdit turns one long video into a week of short, captioned vertical clips — edited entirely on your iPhone.">
+  <title>BoldEdit</title>
+
+  <!-- ▸ GOOGLE SEARCH CONSOLE DOĞRULAMASI — SİLMEYİN.
+     OAuth branding doğrulaması bu alan adının sahibi olduğumuzu kanıtlamamızı istiyor
+     ("home page URL is not registered to you" reddi). Bu etiket kaldırılırsa Search
+     Console doğrulamayı DÜŞÜRÜR ve OAuth doğrulaması da onunla birlikte geçersizleşir.
+     Etiketin bu sayfada, yani ana sayfa URL'inin TAM KENDİSİNDE durması gerekiyor. -->
+  <meta name="google-site-verification" content="UvRCSyEvQzBeuWscwfZqWqQXRtfhgGidJH0wQf6o5s0" />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1b1b1d;
+      --muted: #63636b;
+      --accent: #c8410a;
+      --accent-link: #d24500;
+      --border: #ececef;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d0d0f;
+        --text: #ececed;
+        --muted: #9a9aa2;
+        --accent: #ff9142;
+        --accent-link: #ff9a52;
+        --border: #262629;
+      }
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 8px 22px 88px
+    }
+
+    header {
+      padding: 56px 0 22px
+    }
+
+    .brand {
+      display: inline-block;
+      font-weight: 800;
+      letter-spacing: .04em;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -.02em;
+      margin: 0 0 12px
+    }
+
+    .lede {
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 0 28px
+    }
+
+    a {
+      color: var(--accent-link);
+      text-decoration: none;
+      border-bottom: 1px solid color-mix(in srgb, var(--accent-link) 35%, transparent)
+    }
+
+    a:hover {
+      border-bottom-color: var(--accent-link)
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 10px;
+      border: none;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    h2 {
+      font-size: 20px;
+      letter-spacing: -.01em;
+      margin: 44px 0 12px
+    }
+
+    ul {
+      margin: 14px 0;
+      padding-left: 20px
+    }
+
+    li {
+      margin: 9px 0
+    }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    footer a {
+      color: var(--muted);
+      border-bottom-color: color-mix(in srgb, var(--muted) 40%, transparent)
+    }
+
+
+    :root {
+      --bg: #ffffff;
+      --text: #1b1b1d;
+      --muted: #63636b;
+      --accent: #c8410a;
+      --accent-link: #d24500;
+      --border: #ececef;
+      --card: #faf6f2;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d0d0f;
+        --text: #ececed;
+        --muted: #9a9aa2;
+        --accent: #ff9142;
+        --accent-link: #ff9a52;
+        --border: #262629;
+        --card: #1a1611;
+      }
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 8px 22px 88px
+    }
+
+    header {
+      padding: 56px 0 26px;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .brand {
+      display: inline-block;
+      font-weight: 800;
+      letter-spacing: .04em;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 34px;
+      line-height: 1.12;
+      letter-spacing: -.02em;
+      margin: 0 0 12px
+    }
+
+    .lede {
+      font-size: 19px;
+      color: var(--muted);
+      margin: 0
+    }
+
+    h2 {
+      font-size: 20px;
+      letter-spacing: -.01em;
+      line-height: 1.25;
+      margin: 44px 0 12px
+    }
+
+    p {
+      margin: 14px 0
+    }
+
+    ul {
+      margin: 14px 0;
+      padding-left: 20px
+    }
+
+    li {
+      margin: 9px 0
+    }
+
+    strong {
+      font-weight: 660
+    }
+
+    a {
+      color: var(--accent-link);
+      text-decoration: none;
+      border-bottom: 1px solid color-mix(in srgb, var(--accent-link) 35%, transparent)
+    }
+
+    a:hover {
+      border-bottom-color: var(--accent-link)
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 18px 0
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      letter-spacing: .01em
+    }
+
+    .card p {
+      margin: 8px 0 0;
+      font-size: 16px
+    }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    footer a {
+      color: var(--muted);
+      border-bottom-color: color-mix(in srgb, var(--muted) 40%, transparent)
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <span class="brand">BoldEdit</span>
+      <h1>Turn one long video into a week of reels.</h1>
+      <p class="lede">BoldEdit is an iPhone app that cuts a long talking-head video into short vertical clips, adds
+        captions automatically, and helps you publish them on a schedule.</p>
+    </header>
+
+    <h2>What BoldEdit does</h2>
+    <ul>
+      <li><strong>Cuts the dead air.</strong> Silences and filler words are removed automatically, so a rambling take
+        becomes a tight clip.</li>
+      <li><strong>Writes the captions.</strong> Speech-to-text runs on your iPhone and produces word-level captions you
+        can restyle.</li>
+      <li><strong>Finds the clips.</strong> One long recording is split into several short, self-contained vertical
+        reels.</li>
+      <li><strong>Schedules the posts.</strong> You pick a time; BoldEdit publishes the finished clip to the account you
+        connected.</li>
+    </ul>
+
+    <h2>Your footage stays on your iPhone</h2>
+    <p>All editing and transcription run <strong>on the device</strong>. BoldEdit has no content server and no user
+      accounts — your video is never uploaded to us. The only time a video leaves your iPhone is when you explicitly
+      publish it, and then it goes <strong>straight from your device to the platform you chose</strong>.</p>
+
+    <h2>Connecting your accounts</h2>
+    <p>Connecting an account is optional and always starts from you, in <em>Profile → Connected Accounts</em>. You can
+      disconnect at any time from the same screen.</p>
+
+    <div class="card">
+      <h3>YouTube</h3>
+      <p>BoldEdit uses <strong>YouTube API Services</strong> to upload a finished clip to <strong>your own
+          channel</strong>. It asks for two permissions only: permission to upload videos, and permission to read your
+        channel's name so the app can show which channel a post will go to. BoldEdit never edits or deletes anything on
+        your channel. Before each upload you choose the title, description, visibility and the “made for kids”
+        declaration yourself.</p>
+      <p>Your use of YouTube through BoldEdit is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms
+          of Service</a>, and Google's handling of your data is described in the <a
+          href="http://www.google.com/policies/privacy">Google Privacy Policy</a>. You can revoke BoldEdit's access at
+        any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+    </div>
+
+    <div class="card">
+      <h3>TikTok</h3>
+      <p>BoldEdit uses TikTok's Content Posting API to publish a finished clip to <strong>your own TikTok
+          account</strong>. You choose the caption, who can view the post, the interaction settings and any
+        commercial-content disclosure before anything is sent.</p>
+    </div>
+
+    <h2>Requirements</h2>
+    <p>iPhone running iOS 17 or later. BoldEdit is free to use, with an optional subscription that unlocks translation,
+      Auto Clips and watermark-free exports.</p>
+
+    <main class="wrap">
+      <header>
+
+        <a class="button" href="https://apps.apple.com/app/id6769207015">Download on the App Store</a>
+      </header>
+
+      <h2>Legal</h2>
+      <ul>
+        <li><a href="/terms.html">Terms of Service</a></li>
+        <li><a href="https://mirbedirhankaygusuz.github.io/boldedit-privacy/">Privacy Policy</a></li>
+      </ul>
+
+      <h2>Support</h2>
+      <p>Questions, bug reports, or feature requests: <a
+          href="mailto:boldeditsupport@gmail.com">boldeditsupport@gmail.com</a></p>
+
+      <footer>
+        © 2026 BoldEdit · <a href="mailto:boldeditsupport@gmail.com">boldeditsupport@gmail.com</a>
+      </footer>
+    </main>
+
+    <footer>
+      <p>
+        <a href="/boldedit-privacy/">Privacy Policy</a> ·
+        <a href="/terms.html">Terms of Service</a> ·
+        <a href="mailto:boldeditsupport@gmail.com">boldeditsupport@gmail.com</a>
+      </p>
+      <p>BoldEdit · Made in Istanbul</p>
+    </footer>
+
+  </div>
+</body>
+
+</html>
