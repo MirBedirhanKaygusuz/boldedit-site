@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>BoldEdit — Returning to the app</title>
+<style>
+  :root{ --bg:#ffffff; --text:#1b1b1d; --muted:#63636b; --accent:#c8410a; --accent-link:#d24500; }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0d0d0f; --text:#ececed; --muted:#9a9aa2; --accent:#ff9142; --accent-link:#ff9a52; }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+    background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .card{max-width:420px; padding:32px 24px; text-align:center}
+  .brand{
+    display:inline-block; font-weight:800; letter-spacing:.04em; font-size:13px;
+    text-transform:uppercase; color:var(--accent); margin-bottom:18px;
+  }
+  h1{font-size:22px; letter-spacing:-.01em; margin:0 0 12px}
+  p{margin:12px 0; color:var(--muted); font-size:15px}
+  a.button{
+    display:inline-block; margin-top:18px; padding:12px 22px; border-radius:10px;
+    background:var(--accent); color:#fff; text-decoration:none; font-weight:600; font-size:15px;
+  }
+</style>
+</head>
+<body>
+<main class="card">
+  <span class="brand">BoldEdit</span>
+  <h1>Taking you back to BoldEdit…</h1>
+  <p>If the app didn’t open automatically, tap the button below.</p>
+  <a class="button" id="open" href="boldedit://oauth/tiktok">Open BoldEdit</a>
+</main>
+<script>
+  // TikTok returns here with ?code=…&state=… (or ?error=…). This page exists as the
+  // universal-link target: on a device with BoldEdit installed iOS opens the app directly
+  // and this HTML is never rendered. It is the fallback path — hand the same query string
+  // to the custom scheme so the app can finish the OAuth exchange either way.
+  var target = "boldedit://oauth/tiktok" + (window.location.search || "");
+  document.getElementById("open").setAttribute("href", target);
+  window.location.replace(target);
+</script>
+</body>
+</html>
