@@ -6,19 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow">
   <meta name="description"
-    content="BoldEdit turns one long video into a week of short, captioned vertical clips — edited entirely on your iPhone.">
+    content="BoldEdit turns one long video into a week of short, captioned vertical clips — edited entirely on your iPhone, then published to your own TikTok and YouTube accounts.">
   <title>BoldEdit</title>
 
-  <!-- ▸ GOOGLE SEARCH CONSOLE DOĞRULAMASI — SİLMEYİN.
-     OAuth branding doğrulaması bu alan adının sahibi olduğumuzu kanıtlamamızı istiyor
-     ("home page URL is not registered to you" reddi). Bu etiket kaldırılırsa Search
-     Console doğrulamayı DÜŞÜRÜR ve OAuth doğrulaması da onunla birlikte geçersizleşir.
-     Etiketin bu sayfada, yani ana sayfa URL'inin TAM KENDİSİNDE durması gerekiyor. -->
+  <!-- Icon / favicon — the same mark used as the iOS app icon and in the app stores. -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+  <link rel="shortcut icon" href="/icon-32.png">
+  <link rel="apple-touch-icon" href="/icon-180.png">
+
   <meta name="application-name" content="BoldEdit">
-<meta property="og:site_name" content="BoldEdit">
-<meta property="og:title" content="BoldEdit">
-<meta property="og:description" content="BoldEdit is an iOS app that turns one long video into short captioned vertical clips and publishes them to your own TikTok and YouTube accounts.">
-<meta name="google-site-verification" content="UvRCSyEvQzBeuWscwfZqWqQXRtfhgGidJH0wQf6o5s0" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BoldEdit">
+  <meta property="og:title" content="BoldEdit">
+  <meta property="og:description"
+    content="BoldEdit is an iOS app that turns one long video into short captioned vertical clips and publishes them to your own TikTok and YouTube accounts.">
+  <meta property="og:image" content="/app-icon-1024.png">
+  <meta property="og:url" content="https://boldedit.xyz/">
+
+  <!-- ▸ GOOGLE SEARCH CONSOLE DOĞRULAMASI — SİLMEYİN.
+     OAuth branding doğrulaması bu alan adının sahibi olduğumuzu kanıtlamamızı istiyor.
+     Etiket kaldırılırsa Search Console doğrulamayı DÜŞÜRÜR ve OAuth doğrulaması da geçersizleşir. -->
+  <meta name="google-site-verification" content="UvRCSyEvQzBeuWscwfZqWqQXRtfhgGidJH0wQf6o5s0" />
 
   <style>
     :root {
@@ -28,128 +37,8 @@
       --accent: #c8410a;
       --accent-link: #d24500;
       --border: #ececef;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0d0d0f;
-        --text: #ececed;
-        --muted: #9a9aa2;
-        --accent: #ff9142;
-        --accent-link: #ff9a52;
-        --border: #262629;
-      }
-    }
-
-    * {
-      box-sizing: border-box
-    }
-
-    html {
-      -webkit-text-size-adjust: 100%
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 17px;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 8px 22px 88px
-    }
-
-    header {
-      padding: 56px 0 22px
-    }
-
-    .brand {
-      display: inline-block;
-      font-weight: 800;
-      letter-spacing: .04em;
-      font-size: 13px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      font-size: 32px;
-      line-height: 1.15;
-      letter-spacing: -.02em;
-      margin: 0 0 12px
-    }
-
-    .lede {
-      font-size: 18px;
-      color: var(--muted);
-      margin: 0 0 28px
-    }
-
-    a {
-      color: var(--accent-link);
-      text-decoration: none;
-      border-bottom: 1px solid color-mix(in srgb, var(--accent-link) 35%, transparent)
-    }
-
-    a:hover {
-      border-bottom-color: var(--accent-link)
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 10px;
-      border: none;
-      background: var(--accent);
-      color: #fff;
-      font-weight: 600;
-      font-size: 15px;
-    }
-
-    h2 {
-      font-size: 20px;
-      letter-spacing: -.01em;
-      margin: 44px 0 12px
-    }
-
-    ul {
-      margin: 14px 0;
-      padding-left: 20px
-    }
-
-    li {
-      margin: 9px 0
-    }
-
-    footer {
-      margin-top: 56px;
-      padding-top: 22px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 14px
-    }
-
-    footer a {
-      color: var(--muted);
-      border-bottom-color: color-mix(in srgb, var(--muted) 40%, transparent)
-    }
-
-
-    :root {
-      --bg: #ffffff;
-      --text: #1b1b1d;
-      --muted: #63636b;
-      --accent: #c8410a;
-      --accent-link: #d24500;
-      --border: #ececef;
       --card: #faf6f2;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 8px 24px rgba(0, 0, 0, .05);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -160,7 +49,8 @@
         --accent: #ff9142;
         --accent-link: #ff9a52;
         --border: #262629;
-        --card: #1a1611;
+        --card: #17140f;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .4);
       }
     }
 
@@ -169,7 +59,8 @@
     }
 
     html {
-      -webkit-text-size-adjust: 100%
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth
     }
 
     body {
@@ -183,64 +74,6 @@
       text-rendering: optimizeLegibility;
     }
 
-    .wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 8px 22px 88px
-    }
-
-    header {
-      padding: 56px 0 26px;
-      border-bottom: 1px solid var(--border)
-    }
-
-    .brand {
-      display: inline-block;
-      font-weight: 800;
-      letter-spacing: .04em;
-      font-size: 13px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: 34px;
-      line-height: 1.12;
-      letter-spacing: -.02em;
-      margin: 0 0 12px
-    }
-
-    .lede {
-      font-size: 19px;
-      color: var(--muted);
-      margin: 0
-    }
-
-    h2 {
-      font-size: 20px;
-      letter-spacing: -.01em;
-      line-height: 1.25;
-      margin: 44px 0 12px
-    }
-
-    p {
-      margin: 14px 0
-    }
-
-    ul {
-      margin: 14px 0;
-      padding-left: 20px
-    }
-
-    li {
-      margin: 9px 0
-    }
-
-    strong {
-      font-weight: 660
-    }
-
     a {
       color: var(--accent-link);
       text-decoration: none;
@@ -251,18 +84,265 @@
       border-bottom-color: var(--accent-link)
     }
 
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 22px
+    }
+
+    /* ── Top bar ─────────────────────────────── */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      backdrop-filter: saturate(180%) blur(12px);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar .wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      height: 60px
+    }
+
+    .topbar .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: -.01em;
+      font-size: 18px;
+      color: var(--text);
+      border: none
+    }
+
+    .topbar .logo img {
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      display: block
+    }
+
+    .topbar nav {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 22px
+    }
+
+    .topbar nav a {
+      color: var(--muted);
+      font-size: 15px;
+      border: none
+    }
+
+    .topbar nav a:hover {
+      color: var(--text)
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 20px;
+      border-radius: 10px;
+      border: none !important;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      white-space: nowrap
+    }
+
+    .btn:hover {
+      filter: brightness(1.05)
+    }
+
+    @media (max-width:640px) {
+      .topbar nav .navlink {
+        display: none
+      }
+    }
+
+    /* ── Hero ─────────────────────────────────── */
+    .hero {
+      text-align: center;
+      padding: 68px 0 40px
+    }
+
+    .hero .app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      margin: 0 auto 22px;
+      display: block
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      line-height: 1.05;
+      letter-spacing: -.03em;
+      margin: 0 0 10px
+    }
+
+    .hero .tagline {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      margin: 0 0 16px
+    }
+
+    .hero .lede {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 26px
+    }
+
+    @media (max-width:640px) {
+      .hero h1 {
+        font-size: 34px
+      }
+
+      .hero .tagline {
+        font-size: 19px
+      }
+    }
+
+    /* ── Sections ─────────────────────────────── */
+    section {
+      padding: 40px 0;
+      border-top: 1px solid var(--border)
+    }
+
+    h2 {
+      font-size: 26px;
+      letter-spacing: -.02em;
+      margin: 0 0 6px
+    }
+
+    .section-lede {
+      color: var(--muted);
+      margin: 0 0 24px;
+      max-width: 640px
+    }
+
+    p {
+      margin: 14px 0
+    }
+
+    strong {
+      font-weight: 660
+    }
+
+    /* feature grid */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px
+    }
+
+    @media (max-width:640px) {
+      .grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .feature h3 {
+      margin: 0 0 4px;
+      font-size: 17px
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px
+    }
+
+    /* steps */
+    ol.steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px
+    }
+
+    @media (max-width:640px) {
+      ol.steps {
+        grid-template-columns: 1fr
+      }
+    }
+
+    ol.steps li {
+      position: relative;
+      padding-left: 46px
+    }
+
+    ol.steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    ol.steps h3 {
+      margin: 3px 0 4px;
+      font-size: 17px
+    }
+
+    ol.steps p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px
+    }
+
+    /* screenshots */
+    .shots {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 4px 0 12px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch
+    }
+
+    .shots img {
+      width: 232px;
+      flex: 0 0 auto;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      scroll-snap-align: start
+    }
+
+    /* cards */
     .card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 18px 20px;
-      margin: 18px 0
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin: 16px 0
     }
 
     .card h3 {
       margin: 0 0 8px;
-      font-size: 16px;
-      letter-spacing: .01em
+      font-size: 17px
     }
 
     .card p {
@@ -270,106 +350,268 @@
       font-size: 16px
     }
 
+    /* faq */
+    details {
+      border-top: 1px solid var(--border);
+      padding: 14px 0
+    }
+
+    details:last-of-type {
+      border-bottom: 1px solid var(--border)
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: 620;
+      font-size: 17px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px
+    }
+
+    details summary::-webkit-details-marker {
+      display: none
+    }
+
+    details summary::after {
+      content: "+";
+      color: var(--muted);
+      font-weight: 400;
+      font-size: 22px
+    }
+
+    details[open] summary::after {
+      content: "–"
+    }
+
+    details p {
+      color: var(--muted);
+      margin: 10px 0 2px;
+      font-size: 16px
+    }
+
+    /* footer */
     footer {
-      margin-top: 56px;
-      padding-top: 22px;
       border-top: 1px solid var(--border);
       color: var(--muted);
-      font-size: 14px
+      font-size: 14px;
+      padding: 30px 0 60px
+    }
+
+    footer .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-bottom: 12px
     }
 
     footer a {
       color: var(--muted);
       border-bottom-color: color-mix(in srgb, var(--muted) 40%, transparent)
     }
+
+    .cta-band {
+      text-align: center;
+      padding: 48px 0
+    }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
 
-    <header>
+  <div class="topbar">
+    <div class="wrap">
+      <a class="logo" href="/">
+        <img src="/app-icon-1024.png" alt="BoldEdit app icon" width="30" height="30">
+        BoldEdit
+      </a>
+      <nav>
+        <a class="navlink" href="#features">Features</a>
+        <a class="navlink" href="#how">How it works</a>
+        <a class="navlink" href="#accounts">Accounts</a>
+        <a class="navlink" href="#faq">FAQ</a>
+        <a class="btn" href="https://apps.apple.com/app/id6769207015">Download</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="wrap">
+
+    <!-- Hero -->
+    <div class="hero">
+      <img class="app-icon" src="/app-icon-1024.png" alt="BoldEdit app icon" width="96" height="96">
       <h1>BoldEdit</h1>
       <p class="tagline">Turn one long video into a week of reels.</p>
-      <p class="lede">BoldEdit is an iOS app for creators. It cuts a long talking-head video into short vertical clips, adds captions automatically, and publishes those clips to the creator’s own TikTok and YouTube accounts on a schedule they choose.</p>
-    </header>
-
-    <h2>What BoldEdit does</h2>
-    <ul>
-      <li><strong>Cuts the dead air.</strong> Silences and filler words are removed automatically, so a rambling take
-        becomes a tight clip.</li>
-      <li><strong>Writes the captions.</strong> Speech-to-text runs on your iPhone and produces word-level captions you
-        can restyle.</li>
-      <li><strong>Finds the clips.</strong> One long recording is split into several short, self-contained vertical
-        reels.</li>
-      <li><strong>Schedules the posts.</strong> You pick a time; BoldEdit publishes the finished clip to the account you
-        connected.</li>
-    </ul>
-
-    <h2>Your footage stays on your iPhone</h2>
-    <p>All editing and transcription run <strong>on the device</strong>. BoldEdit has no content server and no user
-      accounts — your video is never uploaded to us. The only time a video leaves your iPhone is when you explicitly
-      publish it, and then it goes <strong>straight from your device to the platform you chose</strong>.</p>
-
-    <h2>Connecting your accounts</h2>
-    <p>Connecting an account is optional and always starts from you, in <em>Profile → Connected Accounts</em>. You can
-      disconnect at any time from the same screen.</p>
-
-    <div class="card">
-      <h3>YouTube</h3>
-      <p>BoldEdit uses <strong>YouTube API Services</strong> to upload a finished clip to <strong>your own
-          channel</strong>. It asks for two permissions only: permission to upload videos, and permission to read your
-        channel's name so the app can show which channel a post will go to. BoldEdit never edits or deletes anything on
-        your channel. Before each upload you choose the title, description, visibility and the “made for kids”
-        declaration yourself.</p>
-      <p>Your use of YouTube through BoldEdit is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms
-          of Service</a>, and Google's handling of your data is described in the <a
-          href="http://www.google.com/policies/privacy">Google Privacy Policy</a>. You can revoke BoldEdit's access at
-        any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+      <p class="lede">BoldEdit is an iOS app for creators. It cuts a long talking-head video into short vertical
+        clips, adds captions automatically, and publishes those clips to your own TikTok and YouTube accounts on a
+        schedule you choose — all edited on your iPhone.</p>
+      <a class="btn" href="https://apps.apple.com/app/id6769207015">Download on the App Store</a>
     </div>
 
-    <div class="card">
-      <h3>TikTok</h3>
-      <p>BoldEdit uses TikTok's Content Posting API to publish a finished clip to <strong>your own TikTok
-          account</strong>. You choose the caption, who can view the post, the interaction settings and any
-        commercial-content disclosure before anything is sent.</p>
+    <!-- Features -->
+    <section id="features">
+      <h2>What BoldEdit does</h2>
+      <p class="section-lede">Everything you need to go from one recording to a week of short-form posts.</p>
+      <div class="grid">
+        <div class="feature">
+          <h3>Cuts the dead air</h3>
+          <p>Silences and filler words are removed automatically, so a rambling take becomes a tight clip.</p>
+        </div>
+        <div class="feature">
+          <h3>Writes the captions</h3>
+          <p>Speech-to-text runs on your iPhone and produces word-level captions you can restyle.</p>
+        </div>
+        <div class="feature">
+          <h3>Finds the clips</h3>
+          <p>One long recording is split into several short, self-contained vertical reels.</p>
+        </div>
+        <div class="feature">
+          <h3>Schedules the posts</h3>
+          <p>You pick a time; BoldEdit publishes the finished clip to the account you connected.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how">
+      <h2>How it works</h2>
+      <p class="section-lede">Four steps, start to finish, without leaving the app.</p>
+      <ol class="steps">
+        <li>
+          <h3>Import your video</h3>
+          <p>Pick a long recording from your camera roll. Nothing is uploaded — it stays on your device.</p>
+        </li>
+        <li>
+          <h3>Auto-cut &amp; caption</h3>
+          <p>BoldEdit trims silences, transcribes on-device, and lays down word-level captions you can style.</p>
+        </li>
+        <li>
+          <h3>Choose your clips</h3>
+          <p>Review the short vertical reels it found and fine-tune cuts, captions and framing.</p>
+        </li>
+        <li>
+          <h3>Schedule &amp; publish</h3>
+          <p>Connect an account and post now or on a schedule, straight from your iPhone to the platform.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="screens">
+      <h2>Inside the app</h2>
+      <p class="section-lede">Editing, transcription and styling all happen on your iPhone.</p>
+      <div class="shots">
+        <img src="/shots/01-editor.png" alt="BoldEdit editor timeline" loading="lazy">
+        <img src="/shots/03-cuts.png" alt="Automatic silence and filler-word cuts" loading="lazy">
+        <img src="/shots/04-captions.png" alt="Word-level automatic captions" loading="lazy">
+        <img src="/shots/05-styles.png" alt="Caption styles" loading="lazy">
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section id="privacy-note">
+      <h2>Your footage stays on your iPhone</h2>
+      <p>All editing and transcription run <strong>on the device</strong>. BoldEdit has no content server and no user
+        accounts — your video is never uploaded to us. The only time a video leaves your iPhone is when you explicitly
+        publish it, and then it goes <strong>straight from your device to the platform you chose</strong>.</p>
+    </section>
+
+    <!-- Connected accounts -->
+    <section id="accounts">
+      <h2>Connecting your accounts</h2>
+      <p class="section-lede">Connecting an account is optional and always starts from you, in
+        <em>Profile → Connected Accounts</em>. You can disconnect at any time from the same screen.</p>
+
+      <div class="card">
+        <h3>YouTube</h3>
+        <p>BoldEdit uses <strong>YouTube API Services</strong> to upload a finished clip to <strong>your own
+            channel</strong>. It asks for two permissions only: permission to upload videos, and permission to read your
+          channel's name so the app can show which channel a post will go to. BoldEdit never edits or deletes anything
+          on your channel. Before each upload you choose the title, description, visibility and the “made for kids”
+          declaration yourself.</p>
+        <p>Your use of YouTube through BoldEdit is subject to the
+          <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and Google's handling of your data is
+          described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. You can revoke
+          BoldEdit's access at any time at
+          <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+      </div>
+
+      <div class="card">
+        <h3>TikTok</h3>
+        <p>BoldEdit uses TikTok's <strong>Content Posting API</strong> to publish a finished clip to <strong>your own
+            TikTok account</strong>. You choose the caption, who can view the post, the interaction settings and any
+          commercial-content disclosure before anything is sent. BoldEdit never reads or changes your existing TikTok
+          content.</p>
+      </div>
+    </section>
+
+    <!-- Pricing & requirements -->
+    <section id="pricing">
+      <h2>Pricing &amp; requirements</h2>
+      <p>BoldEdit runs on <strong>iPhone with iOS 17 or later</strong>. The app is <strong>free to use</strong>, with an
+        optional subscription that unlocks translation, Auto Clips and watermark-free exports. You can cancel anytime;
+        subscriptions are managed through your Apple ID.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2>Frequently asked questions</h2>
+
+      <details>
+        <summary>Is BoldEdit free?</summary>
+        <p>Yes. The core editor, on-device transcription and captions are free. An optional subscription unlocks
+          translation, Auto Clips and watermark-free exports.</p>
+      </details>
+
+      <details>
+        <summary>Where do my videos go?</summary>
+        <p>Nowhere but your device — until you publish. All cutting and transcription run locally on your iPhone.
+          BoldEdit has no content server. When you publish, the clip goes directly from your phone to the platform you
+          picked.</p>
+      </details>
+
+      <details>
+        <summary>Which accounts can I connect?</summary>
+        <p>TikTok and YouTube. Connecting is optional and starts from <em>Profile → Connected Accounts</em>. BoldEdit
+          only ever posts to <strong>your own</strong> account, and only the posts you create.</p>
+      </details>
+
+      <details>
+        <summary>Can I disconnect an account later?</summary>
+        <p>Yes, at any time from the same <em>Connected Accounts</em> screen. You can also revoke access from the
+          platform directly — for YouTube at
+          <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+      </details>
+
+      <details>
+        <summary>Do I need an account to use the editor?</summary>
+        <p>No. BoldEdit has no sign-up. You can import, edit, caption and export without any account. Connecting TikTok
+          or YouTube is only needed if you want to publish directly from the app.</p>
+      </details>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-band">
+      <a class="btn" href="https://apps.apple.com/app/id6769207015">Download BoldEdit on the App Store</a>
     </div>
 
-    <h2>Requirements</h2>
-    <p>iPhone running iOS 17 or later. BoldEdit is free to use, with an optional subscription that unlocks translation,
-      Auto Clips and watermark-free exports.</p>
+  </main>
 
-    <main class="wrap">
-      <header>
+  <footer>
+    <div class="wrap">
+      <div class="row">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="mailto:boldeditsupport@gmail.com">Support</a>
+        <a href="https://apps.apple.com/app/id6769207015">App Store</a>
+      </div>
+      <div>© 2026 BoldEdit · Made in Istanbul · <a
+          href="mailto:boldeditsupport@gmail.com">boldeditsupport@gmail.com</a></div>
+    </div>
+  </footer>
 
-        <a class="button" href="https://apps.apple.com/app/id6769207015">Download on the App Store</a>
-      </header>
-
-      <h2>Legal</h2>
-      <ul>
-        <li><a href="/terms/">Terms of Service</a></li>
-        <li><a href="/privacy/">Privacy Policy</a></li>
-      </ul>
-
-      <h2>Support</h2>
-      <p>Questions, bug reports, or feature requests: <a
-          href="mailto:boldeditsupport@gmail.com">boldeditsupport@gmail.com</a></p>
-
-      <footer>
-        © 2026 BoldEdit · <a href="mailto:boldeditsupport@gmail.com">boldeditsupport@gmail.com</a>
-      </footer>
-    </main>
-
-    <footer>
-      <p>
-        <a href="/privacy/">Privacy Policy</a> ·
-        <a href="/terms/">Terms of Service</a> ·
-        <a href="mailto:boldeditsupport@gmail.com">boldeditsupport@gmail.com</a>
-      </p>
-      <p>BoldEdit · Made in Istanbul</p>
-    </footer>
-
-  </div>
 </body>
 
 </html>
