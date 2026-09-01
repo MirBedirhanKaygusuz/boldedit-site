@@ -60,8 +60,29 @@
   footer{margin-top:48px; padding-top:22px; border-top:1px solid var(--border); color:var(--muted); font-size:14px}
   footer a{color:var(--muted); border-bottom-color:color-mix(in srgb, var(--muted) 40%, transparent)}
 </style>
+<style>
+  .site-topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--border)}
+  .site-topbar a{border-bottom:0}
+  .site-topbar .nav-inner{max-width:720px;margin:0 auto;padding:8px 22px;display:flex;align-items:center;gap:12px 18px;min-height:56px;flex-wrap:wrap}
+  .site-topbar .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:-.01em;color:var(--text)}
+  .site-topbar .logo img{width:28px;height:28px;border-radius:7px;display:block}
+  .site-topbar .links{margin-left:auto;display:flex;align-items:center;gap:18px}
+  .site-topbar .links a{color:var(--muted);font-size:15px}
+  .site-topbar .links a:hover{color:var(--text)}
+</style>
 </head>
 <body>
+<div class="site-topbar">
+  <div class="nav-inner">
+    <a class="logo" href="/"><img src="/app-icon-1024.png" alt="BoldEdit app icon" width="28" height="28">BoldEdit</a>
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/features/">Features</a>
+      <a href="/publishing/">Publishing</a>
+      <a href="/support/">Support</a>
+    </div>
+  </div>
+</div>
 <main class="wrap">
   <header>
     <span class="brand">BoldEdit</span>
@@ -159,6 +180,9 @@
   <p>Questions about this policy or your data? Email us at <a href="mailto:boldeditsupport@gmail.com">boldeditsupport@gmail.com</a>.</p>
 
   <footer>
+    <div style="margin-bottom:10px">
+      <a href="/">Home</a> · <a href="/features/">Features</a> · <a href="/publishing/">Publishing</a> · <a href="/support/">Support</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a>
+    </div>
     © 2026 BoldEdit · <a href="mailto:boldeditsupport@gmail.com">boldeditsupport@gmail.com</a>
   </footer>
 </main>
